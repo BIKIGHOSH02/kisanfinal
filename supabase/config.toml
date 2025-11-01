@@ -1,0 +1,4 @@
+project_id = "urdqfmxuyxfvzxsffmek"
+
+[functions.agro-chat]
+verify_jwt = false

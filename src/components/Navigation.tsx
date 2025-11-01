@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Sprout, LayoutDashboard } from "lucide-react";
+import { Sprout, LayoutDashboard, MessageCircle } from "lucide-react";
 
 const Navigation = () => {
   const location = useLocation();
@@ -32,6 +32,15 @@ const Navigation = () => {
               >
                 <LayoutDashboard className="h-4 w-4" />
                 Dashboard
+              </Button>
+            </Link>
+            <Link to="/chatbot">
+              <Button 
+                variant={location.pathname === "/chatbot" ? "default" : "ghost"}
+                className="gap-2"
+              >
+                <MessageCircle className="h-4 w-4" />
+                AI Assistant
               </Button>
             </Link>
           </div>
