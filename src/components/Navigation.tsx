@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Sprout, LayoutDashboard, MessageCircle } from "lucide-react";
+import { Sprout, LayoutDashboard, MessageCircle, LogIn } from "lucide-react";
 
 const Navigation = () => {
   const location = useLocation();
@@ -43,6 +43,14 @@ const Navigation = () => {
                 AI Assistant
               </Button>
             </Link>
+            {location.pathname === "/" && (
+              <Link to="/auth">
+                <Button variant="default" className="gap-2">
+                  <LogIn className="h-4 w-4" />
+                  Login
+                </Button>
+              </Link>
+            )}
           </div>
         </div>
       </div>
